@@ -107,7 +107,11 @@ public class KhachHangRepostority {
                     + "FROM KhachHang sp "
                     + "WHERE sp.ten LIKE :ten ";
             Query<KhachHang> hth = session.createQuery(query);
+<<<<<<< HEAD
             hth.setParameter("ten","%"+ ma+"%");
+=======
+            hth.setParameter("ten", ma);
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
             khachHang = hth.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace(System.out);
@@ -115,4 +119,10 @@ public class KhachHangRepostority {
         return khachHang;
     
     }
+<<<<<<< HEAD
+=======
+    public static void main(String[] args) {
+        
+    }
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
 }

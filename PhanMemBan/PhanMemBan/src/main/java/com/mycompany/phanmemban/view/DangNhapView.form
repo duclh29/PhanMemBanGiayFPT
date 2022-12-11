@@ -31,10 +31,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
               <Component id="jLabel9" min="-2" pref="513" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+=======
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -42,8 +48,12 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
+<<<<<<< HEAD
           <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
           <Component id="jPanel4" alignment="1" max="32767" attributes="0"/>
+=======
+          <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
       </Group>
     </DimensionLayout>
   </Layout>
@@ -58,6 +68,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
               <Group type="102" attributes="0">
                   <EmptySpace pref="140" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -93,12 +104,58 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
+=======
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
                           <Component id="btnDangNhap" min="-2" pref="134" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+=======
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel6" min="-2" pref="26" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="683" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtUsername" alignment="1" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Component id="jSeparator1" alignment="1" min="-2" pref="193" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLabel5" min="-2" pref="26" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="txtPass" min="-2" pref="193" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jSeparator2" alignment="1" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="btnDangNhap" min="-2" pref="134" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
                       </Group>
                   </Group>
               </Group>
@@ -139,6 +196,10 @@
                   <Component id="btnDangNhap" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
+<<<<<<< HEAD
+=======
+              <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
           </Group>
         </DimensionLayout>
       </Layout>
@@ -207,6 +268,7 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\lehuy\OneDrive\Documents\PhanMemBanGiayFPT\PhanMemBan\src\main\resource\images\ImgMatKhau.png"/>
@@ -217,6 +279,15 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\lehuy\OneDrive\Documents\PhanMemBanGiayFPT\PhanMemBan\src\main\resource\images\ImgDangNhap.png"/>
+=======
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\PC\Downloads\Phanmemne\Phanmem\PhanMemBan (2)\PhanMemBan\src\main\java\com\mycompany\phanmemban\images\hup.jpg"/>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
             </Property>
           </Properties>
         </Component>
@@ -224,6 +295,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel8">
     </Component>
+<<<<<<< HEAD
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -231,5 +303,7 @@
         </Property>
       </Properties>
     </Component>
+=======
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
   </SubComponents>
 </Form>

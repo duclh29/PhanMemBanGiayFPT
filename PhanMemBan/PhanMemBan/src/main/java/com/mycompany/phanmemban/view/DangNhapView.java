@@ -7,7 +7,14 @@ package com.mycompany.phanmemban.view;
 import com.mycompany.phanmemban.model.NhanVien;
 import com.mycompany.phanmemban.service.LoginService;
 import com.mycompany.phanmemban.service.impl.LoginServiceimpl;
+<<<<<<< HEAD
 import javax.swing.JOptionPane;
+=======
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
 
 /**
  *
@@ -47,8 +54,13 @@ public class DangNhapView extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+=======
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -90,15 +102,20 @@ public class DangNhapView extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\ImgMatKhau.png")); // NOI18N
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\ImgDangNhap.png")); // NOI18N
+=======
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\Phanmemne\\Phanmem\\PhanMemBan (2)\\PhanMemBan\\src\\main\\java\\com\\mycompany\\phanmemban\\images\\hup.jpg")); // NOI18N
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(140, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -129,6 +146,41 @@ public class DangNhapView extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(btnDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90))))
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(683, 683, 683)
+                                .addComponent(jLabel2)
+                                .addGap(0, 0, 0)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtUsername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(81, 81, 81)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                                .addComponent(jLabel1)
+                                                .addGap(18, 18, 18))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(7, 7, 7)))
+                                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                        .addComponent(btnDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)))))
+                        .addGap(50, 50, 50))))
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,26 +210,42 @@ public class DangNhapView extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(btnDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<<<<<<< HEAD
         );
 
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\anhNen.jpg")); // NOI18N
 
+=======
+            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
+=======
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
                 .addComponent(jLabel8))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
         );
 
         pack();
@@ -199,6 +267,11 @@ public class DangNhapView extends javax.swing.JFrame {
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
         String user = txtUsername.getText();
         String pass = String.valueOf(txtPass.getPassword());
+<<<<<<< HEAD
+=======
+        NhanVien nhanVien=new NhanVien();
+        nhanVien.setUser(user);
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
         try {
             NhanVien nv = lgsv.findLogin(user, pass);
             if (user.equalsIgnoreCase(nv.getMa()) && pass.equalsIgnoreCase(nv.getMatKhau())) {
@@ -210,9 +283,15 @@ public class DangNhapView extends javax.swing.JFrame {
                     hm.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(this, "Bạn đã đăng nhập với tư cách là quản lí");
+<<<<<<< HEAD
                     HomeView hm = new HomeView();
                     this.dispose();
                     hm.setVisible(true);
+=======
+                    QuanLiView qlv=new QuanLiView();
+                    this.dispose();
+                    qlv.setVisible(true);
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
                 }
             } else if (user.isBlank() || pass.isBlank()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng điền tài khoản mật khẩu");
@@ -248,6 +327,10 @@ public class DangNhapView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(DangNhapView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
+=======
+        //</editor-fold>
+>>>>>>> 9174aa3783a5d7c366fa1c20cbc17bd3043fa336
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
