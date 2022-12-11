@@ -401,6 +401,10 @@ public class MauSacView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MauSacView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
+=======
+        //</editor-fold>
+>>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

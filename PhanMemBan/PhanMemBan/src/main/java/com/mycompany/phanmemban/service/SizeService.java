@@ -12,7 +12,10 @@ import java.util.List;
  * @author PC
  */
 public interface SizeService {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
     public List<Size> getALlSize();
 
     String add(Size sz);

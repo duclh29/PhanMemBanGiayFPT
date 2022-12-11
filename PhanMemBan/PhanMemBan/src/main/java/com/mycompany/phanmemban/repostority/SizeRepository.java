@@ -5,7 +5,10 @@
 package com.mycompany.phanmemban.repostority;
 
 import com.mycompany.phanmemban.Untilies.hibernateconfig;
+<<<<<<< HEAD
 import com.mycompany.phanmemban.model.SanPham;
+=======
+>>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
 import com.mycompany.phanmemban.model.Size;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +22,7 @@ import org.hibernate.Transaction;
  * @author PC
  */
 public class SizeRepository {
+<<<<<<< HEAD
 
     Session session = hibernateconfig.getFACTORY().openSession();
 
@@ -28,6 +32,15 @@ public class SizeRepository {
 
         ArrayList<Size> list = (ArrayList<Size>) query.getResultList();
         return list;
+=======
+     Session session = hibernateconfig.getFACTORY().openSession();
+ List<Size> listSize=null;
+   public List<Size> getAllSize(){
+        listSize=new ArrayList<>();
+        Query qe=session.createQuery("from Size");
+        return qe.getResultList();
+
+>>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
     }
 
     public String add(Size sz) {
@@ -100,4 +113,10 @@ public class SizeRepository {
         }
         return list;
     }
+<<<<<<< HEAD
+=======
+    public static void main(String[] args) {
+        System.out.println(new SizeRepository().listSize);
+    }
+>>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
 }
