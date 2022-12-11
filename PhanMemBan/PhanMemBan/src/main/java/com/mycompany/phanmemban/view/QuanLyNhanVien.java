@@ -15,12 +15,24 @@ import com.mycompany.phanmemban.service.impl.ChucVulmpl;
 import com.mycompany.phanmemban.service.impl.CuahangServicelmpl;
 import com.mycompany.phanmemban.service.impl.NhanVienServicelmpl;
 import java.awt.Color;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+=======
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+<<<<<<< HEAD
+=======
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -30,11 +42,21 @@ import javax.swing.table.DefaultTableModel;
  * @author LONG
  */
 public class QuanLyNhanVien extends javax.swing.JFrame {
+<<<<<<< HEAD
 private DefaultTableModel defaultTableModel;
     private DefaultComboBoxModel defaultComboBoxModel;
     private CuaHangService cuahangservice= new CuahangServicelmpl();
     private ChucVuService chucvuservice=new ChucVulmpl();
     private NhanVienService nhanvienservice=new NhanVienServicelmpl();
+=======
+
+    private DefaultTableModel defaultTableModel;
+    private DefaultComboBoxModel defaultComboBoxModel;
+    private CuaHangService cuahangservice = new CuahangServicelmpl();
+    private ChucVuService chucvuservice = new ChucVulmpl();
+    private NhanVienService nhanvienservice = new NhanVienServicelmpl();
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     /**
      * Creates new form QuanLyNhanVien
      */
@@ -49,12 +71,21 @@ private DefaultTableModel defaultTableModel;
         cb_trangthai.setSelectedIndex(0);
         setTitle("Hệ Thống Quản Lý Cửa Hàng Bán Giày FPT");
     }
+<<<<<<< HEAD
   public void loadData(List<NhanVien> list) {
+=======
+
+    public void loadData(List<NhanVien> list) {
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         defaultTableModel = (DefaultTableModel) tbl_bang.getModel();
         defaultTableModel.setRowCount(0);
         for (NhanVien nhanvien : list) {
             defaultTableModel.addRow(new Object[]{
+<<<<<<< HEAD
 //                nhanvien.getId(),
+=======
+                //                nhanvien.getId(),
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
                 nhanvien.getMa(),
                 nhanvien.getTen(),
                 nhanvien.gGioiTinh(),
@@ -68,6 +99,10 @@ private DefaultTableModel defaultTableModel;
             });
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 //    public void loadcbb() {
 //        ArrayList<String> listtt = new ArrayList<>();
 //        listtt.add("Đang làm việc");
@@ -80,6 +115,7 @@ private DefaultTableModel defaultTableModel;
 //        
 //
 //    }
+<<<<<<< HEAD
 private void loadCombobox(ArrayList<CuaHang>list){
     defaultComboBoxModel=(DefaultComboBoxModel)cb_cuahang.getModel();
     for(CuaHang cuahang:list){
@@ -96,6 +132,26 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
     public boolean checkDL() {
         String p_ten = "[a-zA-Z0-9]+";
+=======
+    private void loadCombobox(ArrayList<CuaHang> list) {
+        defaultComboBoxModel = (DefaultComboBoxModel) cb_cuahang.getModel();
+        for (CuaHang cuahang : list) {
+            defaultComboBoxModel.addElement(cuahang);
+        }
+    }
+
+    private void loadComboboxmh(ArrayList<ChucVu> list) {
+        defaultComboBoxModel = (DefaultComboBoxModel) cb_chucvu.getModel();
+        for (ChucVu chucvu : list) {
+            defaultComboBoxModel.addElement(chucvu);
+        }
+    }
+    private Map<String, Object> mapMa = new HashMap<>();
+
+    public boolean checkDL() {
+        String p_ten = "[a-zA-Z0-9]+";
+        String sdt = "[0-9]{0,30}";
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         if (txt_ma.getText().equals("")) {
             txt_ma.setBackground(Color.red);
             JOptionPane.showMessageDialog(this, "Mã Nhân Viên không được trống");
@@ -114,6 +170,7 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             JOptionPane.showMessageDialog(this, "Tên Nhân Viên sai định dạng");
             return false;
         }
+<<<<<<< HEAD
         NhanVien nhanvien = new NhanVien();
         if(mapMa.containsKey(nhanvien.getMa())){
             txt_ma.setBackground(Color.red);
@@ -123,6 +180,45 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
         return true;
     }
+=======
+        if (txt_pass.getText().equals("")) {
+            txt_pass.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Mật khẩu Nhân Viên không được trống");
+            return false;
+        } else if (txt_pass.getText().matches(p_ten) == false) {
+            txt_pass.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Mật khẩu Nhân Viên sai định dạng");
+            return false;
+        }
+        if (txt_sdt.getText().equals("")) {
+            txt_sdt.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Số điện thoại ko được bỏ trống");
+            return false;
+        } else if (txt_sdt.getText().matches(sdt) == false) {
+            txt_sdt.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Nhập sai định dạng");
+            return false;
+        }
+        if (txt_diachi.getText().equals("")) {
+            txt_diachi.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Số điện thoại ko được bỏ trống");
+            return false;
+//        }else if(txt_diachi.getText().matches(p_ten)==false){
+//            txt_diachi.setBackground(Color.red);
+//            JOptionPane.showMessageDialog(this, "Nhập sai định dạng");
+//            return false;
+        }
+        if (txt_ngaysinh.getText().equals("")) {
+            txt_ngaysinh.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Ngày sinh ko được bỏ trống");
+            return false;
+        }
+        
+
+        return true;
+    }
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -162,6 +258,12 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
         jTextField6 = new javax.swing.JTextField();
         cb_chucvu = new javax.swing.JComboBox<>();
         txt_ma = new javax.swing.JTextField();
+<<<<<<< HEAD
+=======
+        jPanel4 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_bang = new javax.swing.JTable();
@@ -183,16 +285,32 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
         jLabel3.setText("GioiTinh:");
 
+<<<<<<< HEAD
         rdo_nam.setText("Nam");
 
+=======
+        buttonGroup1.add(rdo_nam);
+        rdo_nam.setText("Nam");
+
+        buttonGroup1.add(rdo_nu);
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         rdo_nu.setText("Nữ");
 
         jLabel4.setText("Ngày Sinh:");
 
         jLabel10.setText("Trạng Thái:");
 
+<<<<<<< HEAD
         jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\Search.png")); // NOI18N
         jButton4.setText("Tìm Kiếm");
+=======
+        jButton4.setText("Tìm Kiếm");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 
         jLabel5.setText("Địa Chỉ:");
 
@@ -204,7 +322,10 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
         jLabel9.setText("Cửa Hàng");
 
+<<<<<<< HEAD
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\Add.png")); // NOI18N
+=======
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         jButton1.setText("Thêm");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +333,10 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             }
         });
 
+<<<<<<< HEAD
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\Delete.png")); // NOI18N
+=======
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         jButton2.setText("Xóa");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,7 +344,10 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             }
         });
 
+<<<<<<< HEAD
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\lehuy\\OneDrive\\Documents\\PhanMemBanGiayFPT\\PhanMemBan\\src\\main\\resource\\images\\Refresh.png")); // NOI18N
+=======
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         jButton3.setText("Sửa");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +355,46 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             }
         });
 
+<<<<<<< HEAD
+=======
+        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+
+        jButton5.setText("Thêm CH");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Thêm CV");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(19, 19, 19))
+        );
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -284,12 +451,19 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
                         .addComponent(cb_cuahang, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cb_trangthai, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
                 .addGap(197, 197, 197))
+=======
+                .addGap(42, 42, 42)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
+<<<<<<< HEAD
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -306,6 +480,33 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(rdo_nu)
                                     .addComponent(rdo_nam)))))
+=======
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(39, 39, 39)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_ten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addGap(33, 33, 33)
+                                    .addComponent(jLabel3))
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addGap(29, 29, 29)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(rdo_nu)
+                                        .addComponent(rdo_nam))))
+                            .addGap(32, 32, 32)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_ngaysinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel4))
+                            .addGap(37, 37, 37)))
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_ma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -319,6 +520,7 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
                         .addGap(30, 30, 30)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cb_cuahang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                             .addComponent(jLabel9))))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -327,12 +529,24 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
                     .addComponent(jLabel4)
                     .addComponent(cb_chucvu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
+=======
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(cb_chucvu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)))
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_diachi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel10)
                     .addComponent(cb_trangthai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -426,16 +640,49 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             NhanVien nhanvien = new NhanVien();
             nhanvien.setMa(txt_ma.getText());
             nhanvien.setTen(txt_ten.getText());
+<<<<<<< HEAD
             java.sql.Date ngayt = new java.sql.Date(new java.util.Date().getTime());
             nhanvien.setNgaySinh(ngayt);
             nhanvien.setGioiTinh(rdo_nam.isSelected()?1:0);
+=======
+            try {
+
+                Date ngaysinh = df.parse(txt_ngaysinh.getText());
+                nhanvien.setNgaySinh(ngaysinh);
+
+            } catch (ParseException ex) { 
+                
+                JOptionPane.showMessageDialog(this, "nhập đúng định dạng");
+                return;
+
+            }
+            try{
+                mapMa.containsKey(nhanvien.getMa());
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(this, "không được trùng");
+                return;
+            }
+//            NhanVien nv = new NhanVien();
+//        if (mapMa.containsKey(nv.getMa())) {
+//            JOptionPane.showMessageDialog(this, "Không được trùng");
+//       
+//           return;
+//           
+//        }
+
+            nhanvien.setGioiTinh(rdo_nam.isSelected() ? 0 : 1);
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
             nhanvien.setDiaChi(txt_diachi.getText());
             nhanvien.setSdt(txt_sdt.getText());
             nhanvien.setMatKhau(txt_pass.getText());
             nhanvien.setCuaHang((CuaHang) cb_cuahang.getSelectedItem());
             nhanvien.setChucVu((ChucVu) cb_chucvu.getSelectedItem());
+<<<<<<< HEAD
           
             
+=======
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
             nhanvien.setTrangThai(cb_trangthai.getSelectedIndex());
 
             String result = nhanvienservice.addnhanvien(nhanvien);
@@ -446,7 +693,11 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
           String ma = (txt_ma.getText());
+=======
+        String ma = (txt_ma.getText());
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         String result = nhanvienservice.deletenhanvien(ma);
         JOptionPane.showMessageDialog(this, result);
         loadData(nhanvienservice.getlistnhanvien());
@@ -454,7 +705,11 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
 
     private void tbl_bangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_bangMouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
        int index = tbl_bang.getSelectedRow();
+=======
+        int index = tbl_bang.getSelectedRow();
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         NhanVien ctsp = nhanvienservice.getlistnhanvien().get(index);
 //        txtid.setText(String.valueOf(ctsp.getId()));
         txt_ma.setText(String.valueOf(ctsp.getMa()));
@@ -468,13 +723,21 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
         txt_pass.setText(String.valueOf(ctsp.getMatKhau()));
         txt_ngaysinh.setText(String.valueOf(ctsp.getNgaySinh()));
         cb_trangthai.setSelectedItem(ctsp.getTrangThai());
+<<<<<<< HEAD
         if(rdo_nam.isSelected()){
            
+=======
+        if (tbl_bang.getValueAt(index, 2).equals("Nam")) {
+            rdo_nam.setSelected(true);
+        } else {
+            rdo_nu.setSelected(true);
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         }
     }//GEN-LAST:event_tbl_bangMouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
          if (checkDL()) {
             int r = tbl_bang.getSelectedRow();
             SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
@@ -484,13 +747,28 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             java.sql.Date ngayt = new java.sql.Date(new java.util.Date().getTime());
             nhanvien.setNgaySinh(ngayt);
             nhanvien.setGioiTinh(rdo_nam.isSelected()?1:0);
+=======
+        if (checkDL()) {
+            int r = tbl_bang.getSelectedRow();
+            SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+            NhanVien nhanvien = new NhanVien();
+            nhanvien.setMa(txt_ma.getText());
+            nhanvien.setTen(txt_ten.getText());
+            java.sql.Date ngayt = new java.sql.Date(new java.util.Date().getTime());
+            nhanvien.setNgaySinh(ngayt);
+            nhanvien.setGioiTinh(rdo_nam.isSelected() ? 0 : 1);
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
             nhanvien.setDiaChi(txt_diachi.getText());
             nhanvien.setSdt(txt_sdt.getText());
             nhanvien.setMatKhau(txt_pass.getText());
             nhanvien.setCuaHang((CuaHang) cb_cuahang.getSelectedItem());
             nhanvien.setChucVu((ChucVu) cb_chucvu.getSelectedItem());
+<<<<<<< HEAD
           
             
+=======
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
             nhanvien.setTrangThai(cb_trangthai.getSelectedIndex());
 
             String result = nhanvienservice.addnhanvien(nhanvien);
@@ -499,6 +777,30 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        CuaHangView cuaHangView = new CuaHangView();
+        cuaHangView.setLocationRelativeTo(null);
+        cuaHangView.setVisible(true);
+        cuaHangView.setDefaultCloseOperation(QuanLyNhanVien.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        ChucVuView chuaVuView = new ChucVuView();
+        chuaVuView.setLocationRelativeTo(null);
+        chuaVuView.setVisible(true);
+        chuaVuView.setDefaultCloseOperation(QuanLyNhanVien.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     /**
      * @param args the command line arguments
      */
@@ -525,6 +827,10 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
             java.util.logging.Logger.getLogger(QuanLyNhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
+=======
+        //</editor-fold>
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -543,6 +849,11 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+<<<<<<< HEAD
+=======
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -557,6 +868,10 @@ private void loadComboboxmh(ArrayList<ChucVu>list){
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+<<<<<<< HEAD
+=======
+    private javax.swing.JPanel jPanel4;
+>>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JRadioButton rdo_nam;
