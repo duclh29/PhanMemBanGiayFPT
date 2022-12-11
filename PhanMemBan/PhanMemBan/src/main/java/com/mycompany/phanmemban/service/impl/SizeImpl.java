@@ -59,7 +59,6 @@ public class SizeImpl {
         return srp.delete(ma);
     }
 
-    @Override
     public List<String> listcbbsize() {
         return srp.listcbbsize();
     }
