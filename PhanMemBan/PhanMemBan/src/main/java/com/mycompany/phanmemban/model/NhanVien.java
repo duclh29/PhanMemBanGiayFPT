@@ -204,7 +204,15 @@ public class NhanVien {
     public void setHoaDons(List<HoaDon> hoaDons) {
         this.hoaDons = hoaDons;
     }
+public static String user;
 
+    public static String getUser() {
+        return user;
+    }
+
+    public static void setUser(String user) {
+        NhanVien.user = user;
+    }
     public String hienthiTrangThai() {
         if (this.trangThai == 0) {
             return "Đang làm việc";

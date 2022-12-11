@@ -4,11 +4,9 @@
  */
 package com.mycompany.phanmemban.repostority;
 
-<<<<<<< HEAD
 import com.mycompany.phanmemban.Untilies.hibernateconfig;
 import com.mycompany.phanmemban.model.MauSac;
 import com.mycompany.phanmemban.model.NhanVien;
-=======
 import com.mycompany.phanmemban.Untilies.DBConnection;
 import com.mycompany.phanmemban.Untilies.hibernateconfig;
 import com.mycompany.phanmemban.model.MauSac;
@@ -17,7 +15,6 @@ import static com.mycompany.phanmemban.repostority.LoginRepository.session;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.NoResultException;
@@ -30,14 +27,10 @@ import org.hibernate.query.Query;
  * @author LONG
  */
 public class NhanVienRepostority {
-<<<<<<< HEAD
-     public List<NhanVien> getAll() {
-=======
-    DBConnection  dbd = null;
+        DBConnection  dbd = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
     public List<NhanVien> getAll() {
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         List<NhanVien> mausac = new ArrayList<>();
         Transaction trns = null;
         Session session = hibernateconfig.getFACTORY().openSession();
@@ -52,28 +45,23 @@ public class NhanVienRepostority {
             session.close();
         }
         return mausac;
-<<<<<<< HEAD
-        
-=======
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 
     }
 
-    public Boolean add(NhanVien nhanvien) {
-        String check = null;
+     public String add(NhanVien nv) {
+        String check;
         Transaction transaction = null;
-        Session session = hibernateconfig.getFACTORY().openSession();
         try {
-            session = hibernateconfig.getFACTORY().openSession();
+           Session session = hibernateconfig.getFACTORY().openSession();
             transaction = session.beginTransaction();
-            session.save(nhanvien);
+            session.save(nv);
+            check = "Add thành công";
             transaction.commit();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            check = "Add thất bại";
         }
-        return true;
+        return check;
     }
-<<<<<<< HEAD
 
     public Boolean Update(NhanVien nhanvien) {
         String check = null;
@@ -89,32 +77,6 @@ public class NhanVienRepostority {
         }
         return true;
     }
-=======
-  public boolean getMa(String ma) {
-        for (NhanVien size : getAll()) {
-            if (ma.equalsIgnoreCase(size.getMa())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public String update(NhanVien nv) {
-        String check;
-        Transaction transaction = null;
-        try {
-            session = hibernateconfig.getFACTORY().openSession();
-            transaction = session.beginTransaction();
-            session.saveOrUpdate(nv);
-            check = "Sửa thành công";
-            transaction.commit();
-        } catch (Exception e) {
-            check = "Sửa thất bại";
-        }
-        return check;
-    }
-    
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
 
     public Boolean delete(String ma) {
         Session session = hibernateconfig.getFACTORY().openSession();
@@ -146,12 +108,8 @@ public class NhanVienRepostority {
         }
         return nhanvien;
     }
-<<<<<<< HEAD
-    public NhanVien getOne(String ma) {     
-=======
 
     public NhanVien getOne(String ma) {
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
         NhanVien nv = new NhanVien();
         Session session = hibernateconfig.getFACTORY().openSession();
         try {
@@ -159,19 +117,12 @@ public class NhanVienRepostority {
                     + "FROM NhanVien sp "
                     + "WHERE sp.ten LIKE :ten ";
             Query<NhanVien> hth = session.createQuery(query);
-<<<<<<< HEAD
-            hth.setParameter("ten","%"+ ma+"%");
-=======
             hth.setParameter("ten", ma);
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
             nv = hth.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
         return nv;
-<<<<<<< HEAD
-    
-=======
 
     }
 
@@ -236,6 +187,5 @@ public class NhanVienRepostority {
             e.printStackTrace(System.out);
         }
         return false;
->>>>>>> 04b43d346461bf4313d9bb8fc82fcfbd8b8ecab0
     }
 }
