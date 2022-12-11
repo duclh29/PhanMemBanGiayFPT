@@ -5,7 +5,10 @@
 package com.mycompany.phanmemban.repostority;
 
 import com.mycompany.phanmemban.Untilies.hibernateconfig;
+<<<<<<< HEAD
 import com.mycompany.phanmemban.model.ChiTietSP;
+=======
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 import com.mycompany.phanmemban.model.LoaiSP;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +20,17 @@ import org.hibernate.query.Query;
 
 /**
  *
+<<<<<<< HEAD
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
 public class LoaiSPRepostority {
 
+=======
+ * @author PC
+ */
+public class LoaiSPRepostority {
+    
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
     Session session = hibernateconfig.getFACTORY().openSession();
 
     public ArrayList<LoaiSP> getAllData() {

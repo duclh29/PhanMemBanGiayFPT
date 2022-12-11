@@ -4,11 +4,15 @@
  */
 package com.mycompany.phanmemban.service.impl;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 import com.mycompany.phanmemban.model.LoaiSP;
 import com.mycompany.phanmemban.repostority.LoaiSPRepostority;
 import com.mycompany.phanmemban.service.LoaiSPService;
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +24,15 @@ import java.util.UUID;
  */
 public class LoaiSPServiceImpl implements LoaiSPService {
 
+=======
+import java.util.List;
+
+/**
+ *
+ * @author PC
+ */
+public class LoaiSPServiceImpl implements LoaiSPService{
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
     private LoaiSPRepostority loaiSPRepostority = new LoaiSPRepostority();
     List<LoaiSP> listLoaiSP = new ArrayList<>();
 
@@ -59,5 +72,8 @@ public class LoaiSPServiceImpl implements LoaiSPService {
     public List<String> listcbbloaisp() {
         return loaiSPRepostority.listcbbloaisp();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 }

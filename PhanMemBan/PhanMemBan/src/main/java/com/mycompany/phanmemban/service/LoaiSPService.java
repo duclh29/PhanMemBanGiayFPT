@@ -4,6 +4,7 @@
  */
 package com.mycompany.phanmemban.service;
 
+<<<<<<< HEAD
 
 import com.mycompany.phanmemban.model.LoaiSP;
 import java.util.List;
@@ -15,6 +16,17 @@ import java.util.List;
 public interface LoaiSPService {
 
     public List<LoaiSP> loadData();
+=======
+import com.mycompany.phanmemban.model.LoaiSP;
+import java.util.List;
+
+/**
+ *
+ * @author PC
+ */
+public interface LoaiSPService {
+       public List<LoaiSP> loadData();
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 
     public String ADD(LoaiSP loaiSP);
 
@@ -23,5 +35,8 @@ public interface LoaiSPService {
     public String Delete(String ma);
     
     public List<String> listcbbloaisp();
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 }

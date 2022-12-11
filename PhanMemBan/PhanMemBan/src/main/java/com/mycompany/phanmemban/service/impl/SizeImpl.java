@@ -7,9 +7,13 @@ package com.mycompany.phanmemban.service.impl;
 import com.mycompany.phanmemban.model.Size;
 import com.mycompany.phanmemban.repostority.SizeRepository;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.mycompany.phanmemban.service.SizeService;
 =======
 >>>>>>> 51edad8e9c2428317c29833f36cb3c7f3beac012
+=======
+import com.mycompany.phanmemban.service.SizeService;
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +23,7 @@ import java.util.Map;
  *
  * @author PC
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 public class SizeImpl implements SizeService {
 
@@ -36,6 +41,9 @@ public class SizeImpl implements SizeService {
 
 =======
 public class SizeImpl {
+=======
+public class SizeImpl implements SizeService{
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
      private SizeRepository srp = new SizeRepository();
     private Map<String, Object> mapMa = new HashMap<>();
     List<Size> listSZ = new ArrayList<>();

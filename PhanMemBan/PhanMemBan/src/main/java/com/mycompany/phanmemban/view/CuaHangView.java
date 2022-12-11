@@ -7,9 +7,15 @@ package com.mycompany.phanmemban.view;
 import com.mycompany.phanmemban.model.CuaHang;
 import com.mycompany.phanmemban.model.LoaiSP;
 import com.mycompany.phanmemban.service.CuaHangService;
+<<<<<<< HEAD
 import com.mycompany.phanmemban.service.LoaiSPService;
 import com.mycompany.phanmemban.service.impl.CuahangServicelmpl;
 import com.mycompany.phanmemban.service.impl.LoaiSPServiceImpl;
+=======
+
+import com.mycompany.phanmemban.service.impl.CuahangServicelmpl;
+//import com.mycompany.phanmemban.service.impl.LoaiSPServiceImpl;
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +44,10 @@ public class CuaHangView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("Hệ Thống Quản Lý Cửa Hàng Bán Giày FPT");
         txtID.disable();
+<<<<<<< HEAD
+=======
+        loadtable(listcuahang);
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
     }
 
     public void loadtable(List<CuaHang> list) {
@@ -113,7 +123,14 @@ public class CuaHangView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+=======
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
         jLabel1.setText("Cửa Hàng");
 
         jLabel4.setText("Tên");
@@ -176,6 +193,7 @@ public class CuaHangView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(jScrollPane2)
                 .addContainerGap())
@@ -212,10 +230,49 @@ public class CuaHangView extends javax.swing.JFrame {
                         .addGap(369, 369, 369)
                         .addComponent(jLabel1)))
                 .addGap(45, 45, Short.MAX_VALUE))
+=======
+                .addGap(79, 79, 79)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMa, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTen, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtthanhpho, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
+                            .addComponent(txtdiachi)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(btnThem)
+                        .addGap(47, 47, 47)
+                        .addComponent(btnSua)
+                        .addGap(61, 61, 61)
+                        .addComponent(btnXoa)))
+                .addGap(45, 45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 27, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(380, 380, 380))
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(95, 95, 95)
@@ -227,6 +284,16 @@ public class CuaHangView extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)))
+=======
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(59, 59, 59)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtdiachi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtMa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,13 +304,22 @@ public class CuaHangView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+=======
+                .addGap(29, 29, 29)
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
                     .addComponent(btnSua)
                     .addComponent(btnXoa))
+<<<<<<< HEAD
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
                 .addContainerGap())
         );
 
@@ -255,7 +331,11 @@ public class CuaHangView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
         );
 
         pack();
@@ -308,7 +388,11 @@ public class CuaHangView extends javax.swing.JFrame {
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         String ma = (txtMa.getText());
+=======
+        String ma = txtMa.getText().toString();
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
         String result = cuahangservice.Delete(ma);
         JOptionPane.showMessageDialog(this, result);
         loadtable(cuahangservice.loadData());
@@ -344,6 +428,10 @@ public class CuaHangView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(CuaHangView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
+=======
+        //</editor-fold>
+>>>>>>> 0d4c1d69402232055105ca16eebb03d553ba5fe0
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
