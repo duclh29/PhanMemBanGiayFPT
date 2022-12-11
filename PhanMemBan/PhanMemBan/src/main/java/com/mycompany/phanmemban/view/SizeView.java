@@ -26,7 +26,14 @@ public class SizeView extends javax.swing.JFrame {
      * Creates new form SizeView
      */
     public SizeView() {
-        initComponents();
+          initComponents();
+         model=(DefaultTableModel) tblSize.getModel();
+         listSz=ssv.getALlSize();
+        loadTable();
+        setTitle("Hệ Thống Quản Lý Cửa Hàng Bán Giày FPT");
+        txtid.disable();
+        setSize(820, 580);
+        setLocationRelativeTo(null);
     }
 
     /**

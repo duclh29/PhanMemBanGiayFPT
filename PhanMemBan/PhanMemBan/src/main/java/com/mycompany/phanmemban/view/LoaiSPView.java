@@ -9,6 +9,7 @@ import com.mycompany.phanmemban.service.LoaiSPService;
 import com.mycompany.phanmemban.service.impl.LoaiSPServiceImpl;
 import java.awt.Color;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,8 +33,23 @@ public class LoaiSPView extends javax.swing.JFrame {
      */
     public LoaiSPView() {
         initComponents();
-    }
+         setLocationRelativeTo(null);
+        loadData(loaiSPService.loadData());
+        txtID.disable();
+        loadcbb();
+        setTitle("Hệ Thống Quản Lý Cửa Hàng Bán Giày FPT");
 
+    }
+ public void loadcbb() {
+        ArrayList<String> listtt = new ArrayList<>();
+        listtt.add("Còn hàng");
+        listtt.add("Hết hàng");
+        defaultComboBoxModel = (DefaultComboBoxModel) cbbTrangThai.getModel();
+        for (String tt : listtt) {
+            defaultComboBoxModel.addElement(tt);
+        }
+
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
