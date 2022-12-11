@@ -6,6 +6,7 @@ package com.mycompany.phanmemban.service.impl;
 
 import com.mycompany.phanmemban.model.Size;
 import com.mycompany.phanmemban.repostority.SizeRepository;
+import com.mycompany.phanmemban.service.SizeService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Map;
  *
  * @author PC
  */
-public class SizeImpl {
+public class SizeImpl implements SizeService{
      private SizeRepository srp = new SizeRepository();
     private Map<String, Object> mapMa = new HashMap<>();
     List<Size> listSZ = new ArrayList<>();
